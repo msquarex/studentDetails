@@ -1,4 +1,4 @@
-// Initialize an array to store student data
+
 let studentsData = [];
 
 document.getElementById("marksForm").addEventListener("submit", function(event) {
@@ -17,19 +17,19 @@ function generateStudentFields() {
     const form = document.getElementById("marksForm");
     const studentsContainer = document.getElementById("students");
     
-    // Show the form
+
     form.style.display = "flex";
     
-    // Clear existing fields
+  
     studentsContainer.innerHTML = '';
     
-    // Generate new fields
+  
     for(let i = 0; i < count; i++) {
         addStudent();
     }
 }
 
-// Function to collect the input data
+
 function collectData() {
     const studentEntries = document.querySelectorAll(".student-entry");
     studentsData = [];
@@ -53,7 +53,7 @@ function collectData() {
     });
 }
 
-// Function to add a new student entry input field
+
 function addStudent() {
     const studentDiv = document.createElement("div");
     studentDiv.classList.add("student-entry");
@@ -90,7 +90,6 @@ function addStudent() {
     document.getElementById("students").appendChild(studentDiv);
 }
 
-// Function to check the result of each student
 function displayResults() {
     let resultHTML = "";
 
@@ -98,15 +97,15 @@ function displayResults() {
         const failedSubjects = [];
         let status = "PASS";
 
-        // Check if the student has failed any subject (marks < 40)
+    
         Object.entries(student.subjectMarks).forEach(([subject, marks]) => {
-            if (marks < 40) {
+            if (marks < 50) {
                 failedSubjects.push(subject);
                 status = "FAIL";
             }
         });
 
-        // Display student results
+   
         resultHTML += `
             <div class="student-result">
                 <h3>Student Details:</h3>
@@ -126,6 +125,5 @@ function displayResults() {
         `;
     });
 
-    // Show the results on the page
     document.getElementById("results").innerHTML = resultHTML;
 }
