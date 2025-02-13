@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Marks</h1>
+        <div class="student-count">
+            <label>Number of Students:</label>
+            <input type="number" id="studentCount" min="1" required>
+            <button type="button" onclick="generateStudentFields()">Generate Fields</button>
+        </div>
+        <form id="marksForm" style="display: none;">
+            <div id="students">
+                <div class="student-entry">
+                    <label>Student Name:</label>
+                    <input type="text" class="student-name" required placeholder="Enter student name">
+                    <br>
+                    <label>Registration Number:</label>
+                    <input type="text" class="reg-number" required placeholder="Enter registration number">
+                    <br>
+                    <label>School with Specialization:</label>
+                    <input type="text" class="school-spec" required placeholder="Enter school and specialization">
+                    <br>
+                    <label>Subject 1:</label>
+                    <input type="number" class="subject1" required placeholder="Enter Subject 1 marks" min="0" max="100">
+                    <br>
+                    <label>Subject 2:</label>
+                    <input type="number" class="subject2" required placeholder="Enter Subject 2 marks" min="0" max="100">
+                    <br>
+                    <label>Subject 3:</label>
+                    <input type="number" class="subject3" required placeholder="Enter Subject 3 marks" min="0" max="100">
+                    <br>
+                    <label>Subject 4:</label>
+                    <input type="number" class="subject4" required placeholder="Enter Subject 4 marks" min="0" max="100">
+                    <br>
+                    <label>Subject 5:</label>
+                    <input type="number" class="subject5" required placeholder="Enter Subject 5 marks" min="0" max="100">
+                    <br>
+                    <label>Subject 6:</label>
+                    <input type="number" class="subject6" required placeholder="Enter Subject 6 marks" min="0" max="100">
+                </div>
+            </div>
+            <button type="button" onclick="addStudent()">Add Another Student</button>
+            <button type="submit">Submit</button>
+        </form>
+        <h2>Results:</h2>
+        <div id="results"></div>
+    </div>
+    <footer>
+        Madhav 23BPS1175
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

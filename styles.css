@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101820; 
+    color: #FEE715; 
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121c22;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+h1, h2 {
+    text-align: center;
+    color: #FEE715; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.student-entry {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid #FEE715;
+    border-radius: 8px;
+}
+
+input {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 14px;
+    background-color: #2a3338; 
+    color: #FEE715; 
+    border: 1px solid #FEE715; 
+    border-radius: 4px;
+    width: 100%; 
+}
+
+input:focus {
+    border-color: #FEE715; 
+    background-color: #3a4346; 
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #FEE715; 
+    color: #101820; 
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%; 
+}
+
+button:hover {
+    background-color: #e0c409; /* Slightly darker yellow on hover */
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #121c22;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.student-count {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.student-result {
+    background-color: #2a3338;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.failed {
+    color: #ff6b6b;
+}
+
+.passed {
+    color: #69db7c;
+}
